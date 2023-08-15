@@ -1,0 +1,7 @@
+require("config.remap")
+require("config.packer")
+require("config.mason")
+require("config.eslint")
+require("config.lsp")
+require("config.telescope")
+require("config.set")
