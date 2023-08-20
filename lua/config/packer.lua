@@ -42,8 +42,8 @@ return require('packer').startup(function(use)
     use {
         'Exafunction/codeium.vim',
         config = function ()
-            -- Change '<C-g>' here to any keycode you like.
-            vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+            -- Ctrl + Space
+            vim.keymap.set('i', '<c-space>', function () return vim.fn['codeium#Accept']() end, { expr = true })
             vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
             vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
             vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
@@ -52,4 +52,17 @@ return require('packer').startup(function(use)
 
     use{'christoomey/vim-tmux-navigator', lazy = false}
 
+    use 'tpope/vim-fugitive'
+    use 'tpope/vim-surround'
+
+		use {
+			"windwp/nvim-autopairs",
+			config = function()
+				require("nvim-autopairs").setup {} 
+			end
+		}
+
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
 end)
+
