@@ -64,5 +64,10 @@ return require('packer').startup(function(use)
 
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
+
+    use {
+      "m4xshen/hardtime.nvim",
+      requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
+    }
 end)
 
