@@ -3,13 +3,11 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'ThePrimeagen/vim-be-good'
 
-	require('packer').startup(function(use)
-		use({ 'rose-pine/neovim', as = 'rose-pine',
+  use { "catppuccin/nvim", as = "catppuccin",  
 		config = function()
-			vim.cmd('colorscheme rose-pine')
+			vim.cmd('colorscheme catppuccin-macchiato')
 		end
-	})
-	end)
+  }
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
