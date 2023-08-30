@@ -53,16 +53,6 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'tpope/vim-surround'
 
-		use {
-			"windwp/nvim-autopairs",
-			config = function()
-				require("nvim-autopairs").setup {} 
-			end
-		}
-
-    use('jose-elias-alvarez/null-ls.nvim')
-    use('MunifTanjim/prettier.nvim')
-
     use {
       "m4xshen/hardtime.nvim",
       requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
