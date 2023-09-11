@@ -37,25 +37,27 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-buffer'                            
 	use 'hrsh7th/vim-vsnip'
 
-    use {
-        'Exafunction/codeium.vim',
-        config = function ()
-            -- Ctrl + Space
-            vim.keymap.set('i', '<c-space>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-            vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-            vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-        end
-    }
+  use {
+      'Exafunction/codeium.vim',
+      config = function ()
+          -- Ctrl + Space
+          vim.keymap.set('i', '<c-space>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+          vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+          vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+          vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+      end
+  }
 
-    use{'christoomey/vim-tmux-navigator', lazy = false}
+  use{'christoomey/vim-tmux-navigator', lazy = false}
 
-    use 'tpope/vim-fugitive'
-    use 'tpope/vim-surround'
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-surround'
 
-    use {
-      "m4xshen/hardtime.nvim",
-      requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
-    }
+  use {
+    "m4xshen/hardtime.nvim",
+    requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
+  }
+
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
 

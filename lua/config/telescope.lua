@@ -1,6 +1,15 @@
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = { "node_modules" },
+  },
+  pickers = {
+    buffers = {
+      mappings = {
+        n = {
+          ["d"] = "delete_buffer",
+        },
+      }
+    }
   }
 }
 
