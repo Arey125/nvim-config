@@ -16,3 +16,5 @@ vim.opt.scrolloff = 8
 vim.g.codeium_disable_bindings = true 
 
 vim.g.netrw_bufsettings = "noma nomod nonu nobl nowrap ro rnu"
+
+vim.opt.hidden = true

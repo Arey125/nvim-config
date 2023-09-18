@@ -13,3 +13,5 @@ vim.keymap.set("n", "<A-k>", "<C-u>zz")
 
 vim.keymap.set("n", "<leader>ce", ":CodeiumEnable<CR>")
 vim.keymap.set("n", "<leader>cd", ":CodeiumDisable<CR>")
+
+vim.keymap.set("n", "<leader>q", ":mks! ~/dev/vim_session<CR>:q<CR>")
