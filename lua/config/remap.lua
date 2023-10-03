@@ -13,5 +13,3 @@ vim.keymap.set("n", "<A-k>", "<C-u>zz")
 
 vim.keymap.set("n", "<leader>ce", ":CodeiumEnable<CR>")
 vim.keymap.set("n", "<leader>cd", ":CodeiumDisable<CR>")
-
-vim.cmd(":iunmap <C-x>")

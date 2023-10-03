@@ -1,4 +1,5 @@
 local lsp = require('lsp-zero').preset({})
+local util = require 'lspconfig.util'
 
 lsp.preset('recommended')
 
@@ -15,10 +16,21 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set('n', '<leader>la', function()
         vim.lsp.buf.code_action()
     end, opts)
+
 end)
 
 lsp.setup()
 
-require('lspconfig').clangd.setup({
-  cmd = { "clangd", "--background-index", "--log=verbose", "--query-driver=/home/user_name/.conan/data/**/g++-*" },
+require('lspconfig').asm_lsp.setup({
+	cmd = { 'asm-lsp' },
+	filetypes = { 'asm', 's', 'S' },
+	root_dir = util.root_pattern('*.asm', '*.s', '*.S', '.git'),
+})
+
+local null_ls = require("null-ls")
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.prettier,
+    },
 })

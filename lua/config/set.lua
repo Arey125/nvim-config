@@ -16,6 +16,7 @@ vim.opt.scrolloff = 8
 vim.g.codeium_disable_bindings = true 
 
 vim.g.netrw_bufsettings = "noma nomod nonu nobl nowrap ro rnu"
-vim.opt.path = '**'
-vim.opt.path:append '**'
+vim.g.netrw_banner = 0
+
+-- vim.opt.path:append '**'
 vim.opt.wildignore:append '**/node_modules/**'
