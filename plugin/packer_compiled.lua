@@ -126,6 +126,11 @@ _G.packer_plugins = {
     path = "/home/arey/.local/share/nvim/site/pack/packer/start/codeium.vim",
     url = "https://github.com/Exafunction/codeium.vim"
   },
+  firenvim = {
+    loaded = true,
+    path = "/home/arey/.local/share/nvim/site/pack/packer/start/firenvim",
+    url = "https://github.com/glacambre/firenvim"
+  },
   ["hardtime.nvim"] = {
     loaded = true,
     path = "/home/arey/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
@@ -175,6 +180,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arey/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["obsidian.nvim"] = {
+    config = { "\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\bdir\19~/Zettelkasten\nsetup\robsidian\frequire\0" },
+    loaded = true,
+    path = "/home/arey/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -227,6 +238,10 @@ time([[Config for codeium.vim]], false)
 time([[Config for catppuccin]], true)
 try_loadstring("\27LJ\2\nD\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0%colorscheme catppuccin-macchiato\bcmd\bvim\0", "config", "catppuccin")
 time([[Config for catppuccin]], false)
+-- Config for: obsidian.nvim
+time([[Config for obsidian.nvim]], true)
+try_loadstring("\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\bdir\19~/Zettelkasten\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+time([[Config for obsidian.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
