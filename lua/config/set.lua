@@ -18,7 +18,6 @@ vim.g.codeium_disable_bindings = true
 vim.g.netrw_bufsettings = "noma nomod nonu nobl nowrap ro rnu"
 vim.g.netrw_banner = 0
 vim.g.netrw_sizestyle = "H"
-vim.g.netrw_keepdir = 0
 
 vim.opt.hidden = true
 
