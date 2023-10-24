@@ -27,3 +27,5 @@ vim.opt.wildignore:append '**/node_modules/**'
 -- font for firenvim
 vim.opt.guifont = "JetBrainsMono Nerd Font"
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
