@@ -9,3 +9,5 @@ require("config.hardtime")
 require("config.bufferline")
 require("config.abbrs")
 require("config.lualine")
+
+require 'hex'.setup()
