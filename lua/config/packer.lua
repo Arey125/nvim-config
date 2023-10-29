@@ -86,5 +86,10 @@ return require('packer').startup(function(use)
   }
 
   use'RaafatTurki/hex.nvim'
+
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
 end)
 
