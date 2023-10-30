@@ -10,7 +10,7 @@ lsp.on_attach(function(client, bufnr)
 	require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
     local opts = {buffer = bufnr}
 
-    vim.keymap.set({'n', 'x'}, '<leader>f', function()
+    vim.keymap.set({'n', 'x'}, '<leader>r', function()
         vim.lsp.buf.format({async = false, timeout_ms = 10000})
     end, opts)
     vim.keymap.set('n', '<leader>la', function()

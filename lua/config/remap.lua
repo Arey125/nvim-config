@@ -15,4 +15,3 @@ vim.keymap.set("n", "<leader>cd", ":CodeiumDisable<CR>")
 vim.keymap.set("n", "<leader>g", ":G<CR>")
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set("n", "<leader>pv", "<nop>")
