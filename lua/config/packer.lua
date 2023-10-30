@@ -25,16 +25,10 @@ return require('packer').startup(function(use)
 
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-nvim-lsp'}, -- Required
 			{'L3MON4D3/LuaSnip'},     -- Required
 		}
 	}
 
-	use 'hrsh7th/cmp-nvim-lua'
-	use 'hrsh7th/cmp-nvim-lsp-signature-help'
-	use 'hrsh7th/cmp-vsnip'                             
-	use 'hrsh7th/cmp-path'                              
-	use 'hrsh7th/cmp-buffer'                            
 	use 'hrsh7th/vim-vsnip'
 
   use {
@@ -91,5 +85,7 @@ return require('packer').startup(function(use)
     'stevearc/oil.nvim',
     config = function() require('oil').setup() end
   }
+
+  use'ms-jpq/coq_nvim'
 end)
 
