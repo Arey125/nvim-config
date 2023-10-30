@@ -1,4 +1,4 @@
-vim.cmd(':COQnow')
+vim.cmd(':COQnow --shut-up')
 
 vim.g.coq_settings = {
   keymap = {
