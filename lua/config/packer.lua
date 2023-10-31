@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
 			{'L3MON4D3/LuaSnip'},     -- Required
 		}
 	}
