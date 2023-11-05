@@ -9,5 +9,6 @@ require("config.hardtime")
 require("config.bufferline")
 require("config.abbrs")
 require("config.lualine")
+require("config.oil")
 
 require 'hex'.setup()

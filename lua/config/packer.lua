@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
 
 			-- Autocompletion
 			{'L3MON4D3/LuaSnip'},     -- Required
+      {'hrsh7th/nvim-cmp'},     -- Required
 		}
 	}
 
@@ -82,9 +83,6 @@ return require('packer').startup(function(use)
 
   use {
     'stevearc/oil.nvim',
-    config = function() require('oil').setup() end
   }
-
-  use'ms-jpq/coq_nvim'
 end)
 
