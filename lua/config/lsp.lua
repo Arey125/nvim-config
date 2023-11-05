@@ -13,7 +13,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set({'n', 'x'}, '<leader>r', function()
         vim.lsp.buf.format({async = false, timeout_ms = 10000})
     end, opts)
-    vim.keymap.set('n', '<leader>la', function()
+    vim.keymap.set('n', '<leader>l', function()
         vim.lsp.buf.code_action()
     end, opts)
 
