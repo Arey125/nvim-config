@@ -1,6 +1,13 @@
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = { "node_modules" },
+    layout_strategy = "vertical",
+    layout_config = {
+      vertical = {
+        preview_height = 0.3,
+        prompt_position = "bottom",
+      },
+    }
   },
   pickers = {
     buffers = {
