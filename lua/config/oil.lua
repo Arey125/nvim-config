@@ -1,3 +1,3 @@
 require('oil').setup({
-  default_file_explorer = true,
+  default_file_explorer = false,
 })

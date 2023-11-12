@@ -91,5 +91,10 @@ return require('packer').startup(function(use)
   use {
     'stevearc/oil.nvim',
   }
+
+  use {
+    "luukvbaal/nnn.nvim",
+    config = function() require("nnn").setup() end
+  }
 end)
 
