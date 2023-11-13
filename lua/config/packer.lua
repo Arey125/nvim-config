@@ -96,9 +96,5 @@ return require('packer').startup(function(use)
     "luukvbaal/nnn.nvim",
     config = function() require("nnn").setup() end
   }
-
-  use {
-    'nvim-treesitter/nvim-treesitter',
-  }
 end)
 
