@@ -1,1 +1,1 @@
-vim.api.nvim_command(':CodeiumDisable')
+vim.cmd(":CodeiumDisable")
