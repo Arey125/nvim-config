@@ -41,3 +41,6 @@ vim.keymap.set(
 	"<cmd>lua require('spider').motion('ge')<CR>",
 	{ desc = "Spider-ge" }
 )
+
+vim.keymap.set("n", "<leader>h", ":CodyChat<CR>")
+vim.keymap.set("n", "<leader>t", ":CodyTask ")
