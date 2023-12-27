@@ -106,5 +106,7 @@ return require('packer').startup(function(use)
   use { "chrisgrieser/nvim-spider" }
 
   use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
+
+  use 'ivanesmantovich/xkbswitch.nvim'
 end)
 
