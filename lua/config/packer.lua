@@ -76,7 +76,12 @@ return require('packer').startup(function(use)
     },
     config = function()
       require("obsidian").setup({
-        dir = "~/Zettelkasten",
+        workspaces = {
+          {
+            name = "Zettelkasten",
+            path = "~/Zettelkasten",
+          }
+        }
       })
     end,
   })
