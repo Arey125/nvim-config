@@ -44,3 +44,5 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>h", ":CodyChat<CR>")
 vim.keymap.set("n", "<leader>t", ":CodyTask ")
+
+vim.keymap.set("v", "p", "P")
