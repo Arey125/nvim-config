@@ -129,5 +129,8 @@ return require('packer').startup(function(use)
       require("dbee").setup(--[[optional config]])
     end
   }
+
+  use 'RishabhRD/popfix'
+  use 'RishabhRD/nvim-cheat.sh'
 end)
 
