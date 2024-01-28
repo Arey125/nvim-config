@@ -11,6 +11,8 @@ vim.keymap.set("n", "<A-k>", "<C-u>zz")
 
 vim.keymap.set("n", "Q", ":q<CR>")
 
+vim.keymap.set("n", "gx", ":execute '!xdg-open ' .. shellescape(expand('<cfile>'), v:true)<CR><CR>")
+
 vim.keymap.set("n", "<leader>ce", ":CodeiumEnable<CR>")
 vim.keymap.set("n", "<leader>cd", ":CodeiumDisable<CR>")
 
@@ -52,4 +54,3 @@ vim.keymap.set("v", "p", "P")
 vim.keymap.set("n", "<Leader>r", "vipyPgvO<Esc>O<Esc>gv!zsh<CR>")
 
 vim.keymap.set("n", "<leader>h", ":Cheat<CR>")
-
