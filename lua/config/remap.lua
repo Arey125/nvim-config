@@ -53,4 +53,4 @@ vim.keymap.set("v", "p", "P")
 
 vim.keymap.set("n", "<Leader>r", "vipyPgvO<Esc>O<Esc>gv!zsh<CR>")
 
-vim.keymap.set("n", "<leader>h", ":Cheat<CR>")
+vim.keymap.set("n", "<leader>s", ":Cheat<CR>")
