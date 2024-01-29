@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
     requires = "nvim-treesitter/nvim-treesitter",
   })
 
-  use { "chrisgrieser/nvim-spider" }
+  -- use { "chrisgrieser/nvim-spider" }
 
   use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
 
