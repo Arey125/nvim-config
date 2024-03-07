@@ -136,6 +136,8 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
 
   -- use 'huggingface/llm.nvim'
-  -- use 'lbrayner/vim-rzip'
+  use 'lbrayner/vim-rzip'
+
+  use 'MunifTanjim/prettier.nvim'
 end)
 
