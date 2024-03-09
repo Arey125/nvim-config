@@ -134,7 +134,8 @@ return require('packer').startup(function(use)
   use 'RishabhRD/nvim-cheat.sh'
 
   use 'ThePrimeagen/harpoon'
-
+   
+  use 'LunarVim/bigfile.nvim'
   -- use 'huggingface/llm.nvim'
 end)
 
