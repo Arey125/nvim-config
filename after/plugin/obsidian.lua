@@ -8,8 +8,6 @@ require("obsidian").setup({
 
   disable_frontmatter = true,
 
-  detect_cwd = false,
-
   mappings = {
     ["gd"] = {
       action = function()
