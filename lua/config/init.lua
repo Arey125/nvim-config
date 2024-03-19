@@ -7,7 +7,6 @@ require("config.telescope")
 require("config.set")
 require("config.hardtime")
 require("config.bufferline")
-require("config.abbrs")
 require("config.lualine")
 require("config.oil")
 
