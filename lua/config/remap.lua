@@ -19,7 +19,7 @@ vim.keymap.set("n", "<leader>cd", ":CodeiumDisable<CR>")
 vim.keymap.set("n", "<leader>g", ":G<CR>")
 
 vim.keymap.set("n", "-", ":NnnPicker %:p:h<CR>", { desc = "Open parent directory" })
-vim.keymap.set('n', '<leader>pf', ':find ')
+vim.keymap.set('n', '<leader>ps', ':find ')
 
 -- vim.keymap.set(
 -- 	{ "n", "o", "x" },

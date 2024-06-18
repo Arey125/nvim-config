@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
     requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
   }
 
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
 
   use'jose-elias-alvarez/null-ls.nvim'
 
@@ -114,21 +114,21 @@ return require('packer').startup(function(use)
 
   -- use 'ivanesmantovich/xkbswitch.nvim'
 
-  use {
-    "kndndrj/nvim-dbee",
-    requires = {
-      "MunifTanjim/nui.nvim",
-    },
-    run = function()
-      -- Install tries to automatically detect the install method.
-      -- if it fails, try calling it with one of these parameters:
-      --    "curl", "wget", "bitsadmin", "go"
-      require("dbee").install()
-    end,
-    config = function()
-      require("dbee").setup(--[[optional config]])
-    end
-  }
+  -- use {
+  --   "kndndrj/nvim-dbee",
+  --   requires = {
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   run = function()
+  --     -- Install tries to automatically detect the install method.
+  --     -- if it fails, try calling it with one of these parameters:
+  --     --    "curl", "wget", "bitsadmin", "go"
+  --     require("dbee").install()
+  --   end,
+  --   config = function()
+  --     require("dbee").setup(--[[optional config]])
+  --   end
+  -- }
 
   use 'RishabhRD/popfix'
   use 'RishabhRD/nvim-cheat.sh'
