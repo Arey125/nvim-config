@@ -38,17 +38,17 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
 
-  -- use {
-  --     'Exafunction/codeium.nvim',
-  --     config = function ()
-  --         -- Ctrl + Space
-  --         vim.keymap.set('i', '<c-space>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-  --         vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-  --         vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-  --         vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+  use {
+      'Exafunction/codeium.vim',
+      config = function ()
+          -- Ctrl + Space
+          vim.keymap.set('i', '<c-space>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+          vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+          vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+          vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
 
-  --     end
-  -- }
+      end
+  }
 
   use{'christoomey/vim-tmux-navigator', lazy = false}
 
@@ -137,8 +137,8 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
 
   -- use 'huggingface/llm.nvim'
-  use 'lbrayner/vim-rzip'
+  -- use 'lbrayner/vim-rzip'
 
-  use 'MunifTanjim/prettier.nvim'
+  -- use 'MunifTanjim/prettier.nvim'
 end)
 
