@@ -3,6 +3,18 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'ThePrimeagen/vim-be-good'
 
+  use {
+      'Exafunction/codeium.vim',
+      config = function ()
+        -- Change '<C-g>' here to any keycode you like.
+          vim.keymap.set('i', '<C-Space>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+          vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+          vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+          vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+      end
+  }
+
+
   use { "catppuccin/nvim", as = "catppuccin",  
 		config = function()
 			vim.cmd('colorscheme catppuccin-macchiato')
@@ -10,7 +22,7 @@ return require('packer').startup(function(use)
   }
 
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.2',
+		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -37,18 +49,6 @@ return require('packer').startup(function(use)
 
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-
-  use {
-      'Exafunction/codeium.vim',
-      config = function ()
-          -- Ctrl + Space
-          vim.keymap.set('i', '<c-space>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-          vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-          vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-          vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-
-      end
-  }
 
   use{'christoomey/vim-tmux-navigator', lazy = false}
 
@@ -135,6 +135,10 @@ return require('packer').startup(function(use)
   use 'RishabhRD/nvim-cheat.sh'
 
   use 'ThePrimeagen/harpoon'
+
+  use 'tpope/vim-dadbod'
+  use 'kristijanhusak/vim-dadbod-completion'
+  use 'kristijanhusak/vim-dadbod-ui'
 
   -- use 'huggingface/llm.nvim'
   -- use 'lbrayner/vim-rzip'
