@@ -1,5 +1,4 @@
 return require('packer').startup(function(use)
-
 	use 'wbthomason/packer.nvim'
 	use 'ThePrimeagen/vim-be-good'
 
@@ -138,5 +137,21 @@ return require('packer').startup(function(use)
    
   -- use 'LunarVim/bigfile.nvim'
   -- use 'huggingface/llm.nvim'
+
+  use 'David-Kunz/gen.nvim'
+
+  use 'nvim-telescope/telescope-ui-select.nvim'
+
+  use {
+    "luckasRanarison/nvim-devdocs",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("nvim-devdocs").setup()
+    end
+  }
 end)
 

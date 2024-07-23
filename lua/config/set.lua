@@ -32,3 +32,5 @@ vim.opt.smartcase = true
 
 vim.opt.cursorline = true
 vim.opt.updatetime = 50
+
+vim.opt.undofile = true
