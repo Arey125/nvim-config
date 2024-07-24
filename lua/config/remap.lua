@@ -1,10 +1,13 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "n", "nzz")
 
-
 vim.keymap.set("n", "<A-h>", ":bp<CR>", { silent = true })
 vim.keymap.set("n", "<A-l>", ":bn<CR>", { silent = true })
 vim.keymap.set("n", "<A-u>", ":bd<CR>", { silent = true })
+
+vim.keymap.set("n", "<A-h>", ":bp<CR>")
+vim.keymap.set("n", "<A-l>", ":bn<CR>")
+vim.keymap.set("n", "<A-u>", ":bd<CR>")
 
 vim.keymap.set("n", "<A-j>", "<C-d>zz", { silent = true })
 vim.keymap.set("n", "<A-k>", "<C-u>zz", { silent = true })
@@ -56,3 +59,6 @@ vim.keymap.set("v", "p", "P")
 vim.keymap.set("n", "<leader>s", ":Cheat<CR>")
 
 vim.keymap.set("n", "<leader>df", ":G log -p -- %<CR>")
+
+vim.keymap.set({ 'n', 'v' }, '<leader>k', ':Gen<CR>')
+vim.keymap.set({ 'n' }, '<leader>d', ':DevdocsOpen<CR>')

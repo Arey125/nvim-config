@@ -1,5 +1,4 @@
 return require('packer').startup(function(use)
-
 	use 'wbthomason/packer.nvim'
 	use 'ThePrimeagen/vim-be-good'
 
@@ -22,10 +21,11 @@ return require('packer').startup(function(use)
 		end
   }
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -61,7 +61,7 @@ return require('packer').startup(function(use)
     requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
   }
 
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
 
   use'jose-elias-alvarez/null-ls.nvim'
 
@@ -116,21 +116,21 @@ return require('packer').startup(function(use)
 
   -- use 'ivanesmantovich/xkbswitch.nvim'
 
-  use {
-    "kndndrj/nvim-dbee",
-    requires = {
-      "MunifTanjim/nui.nvim",
-    },
-    run = function()
-      -- Install tries to automatically detect the install method.
-      -- if it fails, try calling it with one of these parameters:
-      --    "curl", "wget", "bitsadmin", "go"
-      require("dbee").install()
-    end,
-    config = function()
-      require("dbee").setup(--[[optional config]])
-    end
-  }
+  -- use {
+  --   "kndndrj/nvim-dbee",
+  --   requires = {
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   run = function()
+  --     -- Install tries to automatically detect the install method.
+  --     -- if it fails, try calling it with one of these parameters:
+  --     --    "curl", "wget", "bitsadmin", "go"
+  --     require("dbee").install()
+  --   end,
+  --   config = function()
+  --     require("dbee").setup(--[[optional config]])
+  --   end
+  -- }
 
   use 'RishabhRD/popfix'
   use 'RishabhRD/nvim-cheat.sh'
@@ -145,5 +145,24 @@ return require('packer').startup(function(use)
   -- use 'lbrayner/vim-rzip'
 
   -- use 'MunifTanjim/prettier.nvim'
+   
+  -- use 'LunarVim/bigfile.nvim'
+  -- use 'huggingface/llm.nvim'
+
+  use 'David-Kunz/gen.nvim'
+
+  use 'nvim-telescope/telescope-ui-select.nvim'
+
+  use {
+    "luckasRanarison/nvim-devdocs",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("nvim-devdocs").setup()
+    end
+  }
 end)
 
