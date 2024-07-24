@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
 
   use {
       'Exafunction/codeium.vim',
+      tag = '1.6.36',
       config = function ()
         -- Change '<C-g>' here to any keycode you like.
           vim.keymap.set('i', '<C-Space>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
