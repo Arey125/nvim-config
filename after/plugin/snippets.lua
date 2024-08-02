@@ -46,7 +46,7 @@ ls.add_snippets("all", {
   s("co", {
     t("export const "),
     f(get_file_name_without_extension, {}),
-    t({" = () {", "\t"}),
+    t({" = () => {", "\t"}),
     i(0, ""),
     t({"", "}"}),
   })
@@ -57,7 +57,7 @@ ls.add_snippets("all", {
     t({"type TProps = {", "\t", "};", ""}),
     t("export const "),
     f(get_file_name_without_extension_cc, {}),
-    t({" = ({}: TProps) {", "\t"}),
+    t({" = ({}: TProps) => {", "\t"}),
     i(0, ""),
     t({"", "}"}),
   })
@@ -67,7 +67,7 @@ ls.add_snippets("all", {
   s("ho", {
     t("export const "),
     f(get_file_name_without_extension_scc, {}),
-    t({" = () {", "\t"}),
+    t({" = () => {", "\t"}),
     i(0, ""),
     t({"", "}"}),
   })
