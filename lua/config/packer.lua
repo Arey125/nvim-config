@@ -164,5 +164,7 @@ return require('packer').startup(function(use)
       require("nvim-devdocs").setup()
     end
   }
+
+  use 'mbbill/undotree'
 end)
 
