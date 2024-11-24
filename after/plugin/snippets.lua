@@ -45,7 +45,7 @@ end
 ls.add_snippets("all", {
   s("co", {
     t("export const "),
-    f(get_file_name_without_extension, {}),
+    f(get_file_name_without_extension_scc, {}),
     t({" = () => {", "\t"}),
     i(0, ""),
     t({"", "}"}),

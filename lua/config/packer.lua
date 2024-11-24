@@ -152,17 +152,5 @@ return require('packer').startup(function(use)
   use 'David-Kunz/gen.nvim'
 
   use 'nvim-telescope/telescope-ui-select.nvim'
-
-  use {
-    "luckasRanarison/nvim-devdocs",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("nvim-devdocs").setup()
-    end
-  }
 end)
 
