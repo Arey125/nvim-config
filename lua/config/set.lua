@@ -36,3 +36,5 @@ vim.opt.cursorline = true
 vim.opt.updatetime = 50
 
 vim.opt.undofile = true
+
+vim.opt.spell = true
