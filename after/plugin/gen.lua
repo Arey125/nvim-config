@@ -1,5 +1,5 @@
 require('gen').setup({
-  model = "deepseek-coder-v2", -- The default model to use.
+  model = "mistral", -- The default model to use.
   quit_map = "q", -- set keymap for close the response window
   retry_map = "<c-r>", -- set keymap to re-send the current prompt
   init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,

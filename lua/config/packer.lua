@@ -153,18 +153,6 @@ return require('packer').startup(function(use)
 
   use 'nvim-telescope/telescope-ui-select.nvim'
 
-  -- use {
-  --   "luckasRanarison/nvim-devdocs",
-  --   requires = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim",
-  --     "nvim-treesitter/nvim-treesitter",
-  --   },
-  --   config = function()
-  --     require("nvim-devdocs").setup()
-  --   end
-  -- }
-
   use 'mbbill/undotree'
 
   -- use { 'neoclide/coc.nvim', branch = 'release' }
