@@ -56,12 +56,12 @@ vim.keymap.set("v", "p", "P")
 
 -- vim.keymap.set("n", "<Leader>r", "vipyPgvO<Esc>O<Esc>gv!zsh<CR>")
 
-vim.keymap.set("n", "<leader>s", ":Cheat<CR>")
+vim.keymap.set("n", "<leader>s", ":find %:p:h/*.module.scss<CR>")
 
-vim.keymap.set("n", "<leader>df", ":G log -p -- %<CR>")
+-- vim.keymap.set("n", "<leader>df", ":G log -p -- %<CR>")
 
 vim.keymap.set({ 'n', 'v' }, '<leader>k', ':Gen<CR>')
-vim.keymap.set({ 'n' }, '<leader>d', ':DevdocsOpen<CR>')
 
 vim.keymap.set('n', '<M-]>', ':cn<CR>')
 vim.keymap.set('n', '<M-[>', ':cp<CR>')
+-- vim.keymap.set({ 'n' }, '<leader>d', ':DevdocsOpen<CR>')

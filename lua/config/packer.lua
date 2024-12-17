@@ -112,7 +112,7 @@ return require('packer').startup(function(use)
 
   -- use { "chrisgrieser/nvim-spider" }
 
-  use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
+  -- use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
 
   -- use 'ivanesmantovich/xkbswitch.nvim'
 
@@ -152,5 +152,15 @@ return require('packer').startup(function(use)
   use 'David-Kunz/gen.nvim'
 
   use 'nvim-telescope/telescope-ui-select.nvim'
+
+  use 'mbbill/undotree'
+
+  -- use { 'neoclide/coc.nvim', branch = 'release' }
+  use {
+    'nvimtools/none-ls.nvim',
+    requires = {
+      'nvimtools/none-ls-extras.nvim'
+    }
+  }
 end)
 
