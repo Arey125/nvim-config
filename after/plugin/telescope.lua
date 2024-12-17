@@ -17,7 +17,7 @@ require('telescope').setup{
         },
       }
     }
-  }
+  },
 }
 
 function vim.getVisualSelection()

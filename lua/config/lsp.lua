@@ -11,7 +11,7 @@ lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr}
 
     vim.keymap.set({'n', 'x'}, '<leader>r', function()
-        vim.lsp.buf.format({async = false, timeout_ms = 5000})
+        vim.lsp.buf.format({async = true, timeout_ms = 3000})
     end, opts)
     vim.keymap.set('n', '<leader>l', function()
         vim.lsp.buf.code_action()

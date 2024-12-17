@@ -62,3 +62,6 @@ vim.keymap.set("n", "<leader>df", ":G log -p -- %<CR>")
 
 vim.keymap.set({ 'n', 'v' }, '<leader>k', ':Gen<CR>')
 vim.keymap.set({ 'n' }, '<leader>d', ':DevdocsOpen<CR>')
+
+vim.keymap.set('n', '<M-]>', ':cn<CR>')
+vim.keymap.set('n', '<M-[>', ':cp<CR>')
