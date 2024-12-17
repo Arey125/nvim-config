@@ -37,6 +37,7 @@ end
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+vim.keymap.set('n', '<leader>d', function() builtin.find_files({cwd = vim.fn.expand('%:p:h')}) end, {silent = true})
 vim.keymap.set('v', '<space>f', function()
 	local text = vim.getVisualSelection()
 	builtin.live_grep({ default_text = text })

@@ -1,5 +1,7 @@
 local lsp = require('lsp-zero').preset({})
 local util = require 'lspconfig.util'
+local lspconfig = require 'lspconfig'
+
 
 lsp.preset('recommended')
 
@@ -11,7 +13,7 @@ lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr}
 
     vim.keymap.set({'n', 'x'}, '<leader>r', function()
-        vim.lsp.buf.format({async = false, timeout_ms = 5000})
+        vim.lsp.buf.format({async = true, timeout_ms = 3000})
     end, opts)
     vim.keymap.set('n', '<leader>l', function()
         vim.lsp.buf.code_action()
@@ -31,8 +33,9 @@ local null_ls = require("null-ls")
 
 null_ls.setup({
     sources = {
-        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.phpcsfixer,
     },
+    debug = true,
 })
 
 -- require('lspconfig').tsserver.setup({
@@ -67,3 +70,22 @@ null_ls.setup({
 --     end
 --   }
 -- })
+
+require'lspconfig'.ts_ls.setup{
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = "/home/g55060-084/.nvm/versions/node/v20.7.0/lib/node_modules/@vue/language-service",
+        languages = {"javascript", "typescript", "vue"},
+      },
+    },
+  },
+  filetypes = {
+    "javascript",
+    "typescript",
+    "vue",
+  },
+}
+
+require('lspconfig').volar.setup{}

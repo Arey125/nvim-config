@@ -112,7 +112,7 @@ return require('packer').startup(function(use)
 
   -- use { "chrisgrieser/nvim-spider" }
 
-  use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
+  -- use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
 
   -- use 'ivanesmantovich/xkbswitch.nvim'
 
@@ -153,18 +153,26 @@ return require('packer').startup(function(use)
 
   use 'nvim-telescope/telescope-ui-select.nvim'
 
-  use {
-    "luckasRanarison/nvim-devdocs",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("nvim-devdocs").setup()
-    end
-  }
+  -- use {
+  --   "luckasRanarison/nvim-devdocs",
+  --   requires = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --     "nvim-treesitter/nvim-treesitter",
+  --   },
+  --   config = function()
+  --     require("nvim-devdocs").setup()
+  --   end
+  -- }
 
   use 'mbbill/undotree'
+
+  -- use { 'neoclide/coc.nvim', branch = 'release' }
+  use {
+    'nvimtools/none-ls.nvim',
+    requires = {
+      'nvimtools/none-ls-extras.nvim'
+    }
+  }
 end)
 
